@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Browser AI",
+  "version": "0.5",
+  "description": "Generate a response using ChatGPT based on highlighted or input text and copy it to clipboard.",
+  "author":"evan@evanconnelly.com",
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "activeTab",
+    "clipboardWrite",
+    "storage",
+    "scripting",
+    "webRequest"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*/*",
+        "http://*/*"
+      ],
+      "js": [
+        "getSelection.js"
+      ]
+    }
+  ]
+}

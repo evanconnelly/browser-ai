@@ -1,0 +1,31 @@
+{
+    "teamOptions": [
+      {
+        "value": "it",
+        "text": "IT"
+      },
+      {
+        "value": "marketing",
+        "text": "Marketing"
+      },
+      {
+        "value": "all",
+        "text": "All"
+      }
+    ],
+    "roleOptions": [
+      {
+        "value": "it-support",
+        "data-team": "it",
+        "text": "IT Support",
+        "role_instructions":"You are not ChatGPT. You are an IT Support Specialist."
+      },
+      {
+        "value": "social-media-manager",
+        "data-team": "marketing",
+        "text": "Social Media Manager",
+        "role_instructions":"I want you to act as a social media manager. Create post copy based on the content I provide."
+      }
+    ]
+  }
+  

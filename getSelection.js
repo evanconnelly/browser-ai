@@ -1,0 +1,4 @@
+(() => {
+    return window.getSelection().toString();
+  })();
+  

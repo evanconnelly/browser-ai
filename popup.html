@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Browser AI</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <button id="settings-button" title="Settings">⚙️</button>
+  <div id="settings" style="display:none;">
+    <h2>Settings</h2>
+    <label for="api-key">API Key:</label>
+    <input type="text" id="api-key" />
+    <div class="spacer"></div>
+    <span>Team: </span><select id="team-selector">
+      <option value="all">All Teams</option>
+      </select>
+      <div class="spacer"></div>
+    <button id="save-settings">Save</button>
+  </div>
+  
+  <h1>Browser AI</h1>
+  
+  <span>Input:</spans><label><input type="radio" name="input-option" value="highlight" checked /> Highlight</label>
+  <label><input type="radio" name="input-option" value="enter" /> Enter</label>
+  <textarea type="text" id="input-text" style="display:none;" placeholder="Enter text here"></textarea>
+<div class="spacer"></div>
+
+  <span>System: </span><select id="role-selector">
+  </select>
+
+  <button id="generate-response">Generate Response</button>
+  <div class="spacer"></div>
+  <div id="response-container">
+    <div id="spinner" class="spinner" style="display:none;"></div>
+  </div>
+  <div class="spacer"></div>
+  <button id="copy-response" style="display:none;">Copy to Clipboard</button>
+  <script src="popup.js"></script>
+</body>
+</html>
