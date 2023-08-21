@@ -4,7 +4,7 @@ A Chrome Extension to leverage the power of AI in your browser, with the ability
 
 Custom instructions/system roles are highly impactful in the utility of AI for specific tasks. This extension is a tool to have many system roles established for a variety of tasks and easily switch between them.
 
-![screenshot.png]
+![screenshot](/screenshot.png)
 
 ## Installation 
 Clone repo and load the folder into Chrome as an unpacked extension
