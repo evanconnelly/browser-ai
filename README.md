@@ -7,7 +7,7 @@ Custom instructions/system roles are highly impactful in the utility of AI for s
 ![screenshot](/screenshot.png)
 
 ## Installation 
-Clone repo and load the folder into Chrome as an unpacked extension
+Clone repo and load the folder into Chrome as an unpacked extension (this allows you to easily edit the config/system roles)
 OR
 - Download extension.zip from [Releases](https://github.com/evanconnelly/browser-ai/releases)
 - Navigate to chrome://extensions/
