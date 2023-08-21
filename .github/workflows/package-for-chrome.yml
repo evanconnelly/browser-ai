@@ -1,0 +1,43 @@
+name: Package Chrome Extension
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Zip extension
+      run: |
+        zip -r extension.zip . -x ".github/*"
+
+    - name: Upload extension as artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: chrome-extension
+        path: extension.zip
+
+  release:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Download artifact
+      uses: actions/download-artifact@v2
+      with:
+        name: chrome-extension
+
+    - name: Create Release and Upload Asset
+      id: create_release
+      run: |
+        gh release create v${{ github.run_number }} ./extension.zip --title "Release ${{ github.run_number }}" --notes "New release of the Chrome extension." --repo ${{ github.repository }}
+      env:
+        GH_TOKEN: ${{ secrets.GH_RELEASE_TOKEN }}
